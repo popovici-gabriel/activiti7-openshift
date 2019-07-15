@@ -1,0 +1,482 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "setup/03-misc.yaml",
+			"settings":
+			{
+				"buffer_size": 132571,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"upp",
+				"Convert Case: Upper Case"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"uper",
+				"Convert Case: Upper Case"
+			],
+			[
+				"UPPS",
+				"Convert Case: Upper Case"
+			],
+			[
+				"add ",
+				"Project: Add Folder"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"json pr",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"json ",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"format",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"pack",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/gabriel/projects/work/activity-cloud-engine",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup"
+	],
+	"file_history":
+	[
+		"/home/gabriel/projects/work/contact-service/README.md",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/03-misc.yaml",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/02-routes.yaml",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/01-services.yaml",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/dev/02-routes.yaml",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/dev/03-misc.yaml",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/dev/01-services.yaml",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/README.md",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/dev/README.md",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/qa/README.md",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/qa/02-routes.yaml",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/qa/03-misc.yaml",
+		"/home/gabriel/projects/work/activity-cloud-engine/setup/04-kong.yaml",
+		"/home/gabriel/projects/work/activity-cloud-engine/README.md",
+		"/home/gabriel/Documents/template.yaml",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/application/activiti-runtime-bundle.Dockerfile",
+		"/home/gabriel/projects/other/activiti-cloud-examples/docker-compose/docker-compose.yml",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker-compose/nginx.conf",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/infrastructure/activiti-realm.json",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/infrastructure/activiti-keycloak.Dockerfile",
+		"/home/gabriel/projects/other/activiti-cloud-examples/docker-compose/nginx.conf",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/infrastructure/nginx.conf",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker-compose/docker-compose.yml",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/infrastructure/rabbitmq.Dockerfile",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/infrastructure/nginx.Dockerfile",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/application/activiti-cloud-query.Dockerfile",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/application/activiti-cloud-notifications-graphql.Dockerfile",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/application/activiti-cloud-audit.Dockerfile",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/modeler/activiti-cloud-modeling.Dockerfile",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker-compose/configurations.txt",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/modeler/activiti-cloud-modeling-backend.Dockerfile",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/modeler/deploy-okd.sh",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/infrastructure/deploy-okd.sh",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/infrastructure/activity-keycloak.Dockerfile",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/infrastructure/nginx.sh",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/infrastructure/nging-docker.yaml",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker-compose/deploy.sh",
+		"/home/gabriel/projects/other/activiti-cloud-examples/docker/frontend-docker-compose.yml",
+		"/home/gabriel/projects/other/activiti-cloud-examples/docker/modelling-docker-compose.yml",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/application-docker-compose.yml",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/infrastructure-docker-compose.yml",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/modelling-docker-compose.yml",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker/multi-application-docker-compose.yml",
+		"/home/gabriel/projects/work/activity-cloud-engine/docker-compose/Makefile",
+		"/home/gabriel/projects/work/job-service/src/test/resources/parameters.json",
+		"/home/gabriel/projects/other/sample-spring-microservices-new/employee-service/pom.xml",
+		"/home/gabriel/projects/other/spring-swagger2markup-demo/pom.xml",
+		"/home/gabriel/Documents/job_service_swagger.js",
+		"/home/gabriel/Downloads/job-service-26.log",
+		"/home/gabriel/Downloads/job-service-25-d2xqx.log",
+		"/home/gabriel/Downloads/job-service-23.log",
+		"/home/gabriel/Downloads/job-service-19.log",
+		"/home/gabriel/projects/work/job-service/Jenkinsfile",
+		"/home/gabriel/projects/work/eventing-api/pom.xml",
+		"/home/gabriel/projects/work/job-service/pom.xml",
+		"/home/gabriel/Downloads/compliance-qa.sql",
+		"/home/gabriel/Documents/cheat-sheets",
+		"/home/gabriel/.config/sublime-text-3/Packages/Pretty JSON/Pretty JSON.sublime-settings",
+		"/home/gabriel/.m2/settings.xml",
+		"/home/gabriel/Documents/settings_generated.xml",
+		"/home/gabriel/Documents/confCons.xml",
+		"/home/gabriel/Documents/hosts.txt",
+		"/home/gabriel/Downloads/settings.xml"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+			"/home/gabriel/projects/work/activity-cloud-engine",
+			"/home/gabriel/projects/work/activity-cloud-engine/docker-compose"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"namespace: ",
+			"image",
+			"containers",
+			"conta",
+			"containers",
+			"one-domain-platform-dev.qacaas.bs.kae.de.iplatform.1and1.org",
+			"dev",
+			"kong-snap",
+			"konga",
+			"activiti7",
+			"184",
+			"100.69.21.142",
+			"alias",
+			"host",
+			"alias",
+			"activiti",
+			"activiti7",
+			"rb-my-app",
+			"require",
+			"ssl",
+			"ssl-required",
+			"runtime-bundle",
+			"100.64.0.24",
+			"notifications",
+			"notifications/graphiql",
+			"/notifications/graphiql",
+			"activiti-cloud-query.one-domain-platform-dev.svc ",
+			"upstream",
+			"proxy_add_x_forwarded_for",
+			"#resolver 100.64.0.24 ipv6=off",
+			"resolver 100.64.0.24 ipv6=off",
+			"resolver 100.64.0.24 ipv6=off;",
+			"#resolver 100.64.0.24 ipv6=off;",
+			"127.0.0.11",
+			"activiti-keycloak.one-domain-platform-dev.svc",
+			"resolver 127.0.0.11",
+			"volumes",
+			"volume",
+			"ENV",
+			"api",
+			"one-domain-platform-dev.svc",
+			"backend",
+			"back",
+			"activiti-cloud-modeling",
+			"oneandone-",
+			":",
+			"tcp",
+			"./activiti-realm.json",
+			"keycloak",
+			"activiti-keycloak-one-domain-platform-dev.qacaas.bs.kae.de.iplatform.1and1.org",
+			"127.0.0.11",
+			"keycloak",
+			"nginx",
+			"ngingx",
+			"upstream",
+			"auth",
+			"activiti",
+			"clo",
+			"cloak",
+			"klo",
+			"kloak",
+			"activiti-cloud-modeling-backend",
+			"POSTGRES",
+			"8080",
+			"activiti-modeling-app",
+			"activiti-cloud-modeling",
+			"activiti-modeling-app",
+			"activiti/activiti-cloud-modeling",
+			"activiti-cloud-modeling",
+			"KEYCLOAK_REALM",
+			"activiti-postgres",
+			"rb-postgres",
+			"activiti-postgres",
+			"rb-my-app",
+			"/rb-my-app",
+			"connector",
+			"payload",
+			"current_processes",
+			"create",
+			"mocked",
+			"job_service",
+			"200",
+			"error handling job",
+			"GENERIC_ERROR",
+			"Configuration error",
+			"400",
+			"Bad request",
+			"1998",
+			"job-pool-2",
+			"timeout",
+			"GENERIC_ERROR",
+			"Exception caught during handleJob",
+			"WARN",
+			"error handling job",
+			"1715",
+			"1713",
+			"1715",
+			"error handling job",
+			"DEBUG",
+			"error handling job ",
+			"400 Bad Request",
+			"ProcessMediatorJobHandler - Http error",
+			"configuration: ",
+			"400 BAD_REQUEST",
+			"400",
+			"HttpClientErrorException$BadRequest",
+			"CREATE",
+			"name",
+			"type",
+			"HikariPool-1",
+			"JobServicePool",
+			"HikariPool-1",
+			"HIkari",
+			"JobservicePool",
+			"Hikari",
+			"JobServicePool",
+			"timeout",
+			"requestTime",
+			"name",
+			"X_ProcessCorrelationID",
+			"arsys",
+			"tenant",
+			"properties",
+			"<\n",
+			"spring-boot-maven-plugin",
+			"state",
+			"    \"",
+			"job-service-local.properties"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"your-host",
+			"qa",
+			"100.69.189.184",
+			"100.64.0.58",
+			"resolver 100.64.0.24 ipv6=off;",
+			"100.64.0.24",
+			"",
+			"=",
+			"activiti-keycloak.one-domain-platform-dev.svc ",
+			"ended_processes",
+			"fasthosts",
+			"10.23.33.13",
+			"gabriel-sorin.popovici@ionos.com",
+			"gpopovici",
+			"AKCp5cbwZMSrjRvA7GXgRcCRRoDaJcFftFhkRDerC8hM9594qiUFvBZnfcWUV8yRDm5DR4nxo",
+			"gpopovici"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "setup/03-misc.yaml",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 132571,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								97792,
+								97797
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 9786.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 40.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "activiti_cloud_engine.sublime-project",
+	"replace":
+	{
+		"height": 71.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/projects/work/filebeat-logging/filebeat.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 397.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

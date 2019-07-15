@@ -1,0 +1,376 @@
+---
+apiVersion: extensions/v1beta1
+kind: NetworkPolicy
+metadata:
+  name: allow-from-default-namespace
+spec:
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              name: default
+  podSelector: {}
+  policyTypes:
+    - Ingress
+---
+# Source: activiti-cloud-full-example/charts/activiti-cloud-modeling/templates/service-backend.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: activiti-cloud-modeling-backend
+  labels:
+    app: activiti-cloud-modeling
+    chart: activiti-cloud-modeling-1.1.10
+    release: "act"
+    heritage: "Tiller"
+  annotations:
+    fabric8.io/expose: "false"
+    fabric8.io/ingress.annotations: 'kubernetes.io/ingress.class: nginx'
+    
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http-backend
+  selector:
+    app: act-activiti-cloud-modeling
+---
+# Source: activiti-cloud-full-example/charts/activiti-cloud-modeling/templates/service-frontend.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: activiti-cloud-modeling
+  labels:
+    app: activiti-cloud-modeling
+    chart: activiti-cloud-modeling-1.1.10
+    release: "act"
+    heritage: "Tiller"
+  annotations:
+    fabric8.io/expose: "false"
+    fabric8.io/ingress.annotations: 'kubernetes.io/ingress.class: nginx'
+    
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: act-activiti-cloud-modeling
+---
+# Source: activiti-cloud-full-example/charts/application/charts/activiti-cloud-audit/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: audit
+  labels:
+    app: act-activiti-cloud-audit
+    chart: activiti-cloud-audit-1.1.10
+    release: act
+    heritage: Tiller
+  annotations:
+    fabric8.io/expose: "false"
+    fabric8.io/ingress.annotations: 'kubernetes.io/ingress.class: nginx'
+    
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: act-activiti-cloud-audit
+
+---
+# Source: activiti-cloud-full-example/charts/application/charts/activiti-cloud-connector/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: example-cloud-connector
+  labels:
+    app: act-activiti-cloud-connector
+    chart: activiti-cloud-connector-1.1.8
+    release: act
+    heritage: Tiller
+  annotations:
+    fabric8.io/expose: "false"
+    
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: act-activiti-cloud-connector
+
+---
+# Source: activiti-cloud-full-example/charts/application/charts/activiti-cloud-notifications-graphql/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: activiti-cloud-notifications
+  labels:
+    chart: "activiti-cloud-notifications-graphql-1.1.11"
+  annotations:
+    fabric8.io/expose: "false"
+    
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: act-activiti-cloud-notifications-graphql
+
+---
+# Source: activiti-cloud-full-example/charts/application/charts/activiti-cloud-query/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: query
+  labels:
+    app: act-activiti-cloud-query
+    chart: activiti-cloud-query-1.1.10
+    release: act
+    heritage: Tiller
+  annotations:
+    fabric8.io/expose: "false"
+    fabric8.io/ingress.annotations: 'kubernetes.io/ingress.class: nginx'
+    
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: act-activiti-cloud-query
+
+---
+# Source: activiti-cloud-full-example/charts/application/charts/postgres/templates/svc-headless.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: act-postgres-headless
+  labels:
+    app: postgres
+    chart: postgres-3.11.3
+    release: "act"
+    heritage: "Tiller"
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+  - name: postgresql
+    port: 5432
+    targetPort: postgresql
+  selector:
+    app: postgres
+    release: "act"
+
+---
+# Source: activiti-cloud-full-example/charts/application/charts/postgres/templates/svc.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: act-postgres
+  labels:
+    app: postgres
+    chart: postgres-3.11.3
+    release: "act"
+    heritage: "Tiller"
+spec:
+  type: ClusterIP
+  ports:
+  - name: postgresql
+    port: 5432
+    targetPort: postgresql
+  selector:
+    app: postgres
+    release: "act"
+    role: master
+
+---
+# Source: activiti-cloud-full-example/charts/application/charts/rabbitmq/templates/service-discovery.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    service.alpha.kubernetes.io/tolerate-unready-endpoints: "true"
+  name: act-rabbitmq-discovery
+  labels:
+    app: rabbitmq
+    chart: rabbitmq-1.19.0
+    release: act
+    heritage: Tiller
+spec:
+  clusterIP: None
+  ports:
+    - name: http
+      protocol: TCP
+      port: 15672
+      targetPort: http
+    - name: amqp
+      protocol: TCP
+      port: 5672
+      targetPort: amqp
+    - name: epmd
+      protocol: TCP
+      port: 4369
+      targetPort: epmd
+    - name: stomp-tcp
+      protocol: TCP
+      port: 61613
+      targetPort: stomp-tcp
+    - name: stomp-ssl
+      protocol: TCP
+      port: 61614
+      targetPort: stomp-ssl
+  publishNotReadyAddresses: true
+  selector:
+    app: rabbitmq
+    release: act
+  type: ClusterIP
+
+---
+# Source: activiti-cloud-full-example/charts/application/charts/rabbitmq/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: act-rabbitmq
+  labels:
+    app: rabbitmq
+    chart: rabbitmq-1.19.0
+    release: act
+    heritage: Tiller
+spec:
+  clusterIP: "None"
+  ports:
+    - name: http
+      protocol: TCP
+      port: 15672
+      targetPort: http
+    - name: amqp
+      protocol: TCP
+      port: 5672
+      targetPort: amqp
+    - name: epmd
+      protocol: TCP
+      port: 4369
+      targetPort: epmd
+    - name: stomp-tcp
+      protocol: TCP
+      port: 61613
+      targetPort: stomp-tcp
+    - name: stomp-ssl
+      protocol: TCP
+      port: 61614
+      targetPort: stomp-ssl
+    
+  selector:
+    app: rabbitmq
+    release: act
+  type: ClusterIP
+
+---
+# Source: activiti-cloud-full-example/charts/application/charts/runtime-bundle/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: rb-my-app
+  labels:
+    app: act-runtime-bundle
+    chart: runtime-bundle-1.1.10
+    release: act
+    heritage: Tiller
+  annotations:
+    fabric8.io/expose: "false"
+    
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: act-runtime-bundle
+
+---
+# Source: activiti-cloud-full-example/charts/infrastructure/charts/activiti-cloud-gateway/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: activiti-cloud-gateway
+  labels:
+    app: act-activiti-cloud-gateway
+    chart: activiti-cloud-gateway-1.1.9
+    release: act
+    heritage: Tiller
+  annotations:
+    fabric8.io/expose: "false"
+    
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: act-activiti-cloud-gateway
+
+---
+# Source: activiti-cloud-full-example/charts/infrastructure/charts/activiti-keycloak/charts/keycloak/templates/headless-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: act-keycloak-headless
+  labels:
+    app: keycloak
+    chart: keycloak-3.1.0
+    release: "act"
+    heritage: "Tiller"
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP
+  selector:
+    app: keycloak
+    release: "act"
+
+---
+# Source: activiti-cloud-full-example/charts/infrastructure/charts/activiti-keycloak/charts/keycloak/templates/http-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: act-keycloak-http
+  labels:
+    app: keycloak
+    chart: keycloak-3.1.0
+    release: "act"
+    heritage: "Tiller"
+spec:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+      protocol: TCP
+  selector:
+    app: keycloak
+    release: "act"
+---

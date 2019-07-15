@@ -1,0 +1,164 @@
+apiVersion: v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    labels:
+      app: act-activiti-cloud-gateway
+      chart: activiti-cloud-gateway-1.1.9
+      heritage: Tiller
+      release: act
+    name: activiti-cloud-gateway
+  spec:
+    host: activiti-cloud-gateway-your-host
+    path: /
+    port:
+      targetPort: http
+    to:
+      kind: Service
+      name: activiti-cloud-gateway
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - host: activiti-cloud-gateway-your-host
+      routerName: router
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    labels:
+      app: activiti-cloud-modeling
+      chart: activiti-cloud-modeling-1.1.10
+      heritage: Tiller
+      release: act
+    name: activiti-cloud-modeling
+  spec:
+    host: activiti-cloud-modeling-your-host
+    path: /
+    port:
+      targetPort: http
+    to:
+      kind: Service
+      name: activiti-cloud-modeling
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - host: activiti-cloud-modeling-your-host
+      routerName: router
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    labels:
+      app: activiti-cloud-modeling
+      chart: activiti-cloud-modeling-1.1.10
+      heritage: Tiller
+      release: act
+    name: activiti-cloud-modeling-backend
+  spec:
+    host: activiti-cloud-modeling-backend-your-host
+    path: /
+    port:
+      targetPort: kong-proxy
+    to:
+      kind: Service
+      name: kong-proxy
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - host: activiti-cloud-modeling-backend-your-host
+      routerName: router
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    labels:
+      app: activiti-keycloak
+      chart: activiti-keycloak-1.1.6
+      heritage: Tiller
+      release: act
+    name: activiti-keycloak
+  spec:
+    host: activiti-keycloak-your-host
+    path: /
+    port:
+      targetPort: http
+    to:
+      kind: Service
+      name: act-keycloak-http
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - host: activiti-keycloak-your-host
+      routerName: router
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    name: kong-admin
+  spec:
+    host: kong-admin-your-host
+    path: /
+    port:
+      targetPort: kong-admin
+    to:
+      kind: Service
+      name: kong-admin
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - host: kong-admin-your-host
+      routerName: router
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    name: konga
+  spec:
+    host: konga-your-host
+    path: /
+    port:
+      targetPort: kong-proxy
+    to:
+      kind: Service
+      name: konga
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - host: konga-your-host
+      routerName: router
+      wildcardPolicy: None
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    labels:
+      app: act-runtime-bundle
+      chart: runtime-bundle-1.1.10
+      heritage: Tiller
+      release: act
+    name: rb-my-app
+  spec:
+    host: rb-my-app-your-host
+    path: /
+    port:
+      targetPort: http
+    to:
+      kind: Service
+      name: rb-my-app
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - host: rb-my-app-your-host
+      routerName: router
+      wildcardPolicy: None
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
